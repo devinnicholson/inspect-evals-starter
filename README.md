@@ -21,7 +21,7 @@ source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 
 # 3) Run the sample eval
-python scripts/run_eval.py --config configs/eval_config.yaml
+PYTHONPATH=src python scripts/run_eval.py --config configs/eval_config.yaml
 ```
 
 The run will generate outputs under `out/` and print a summary. Open the
