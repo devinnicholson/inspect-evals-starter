@@ -1,0 +1,9 @@
+name: base_policy
+version: 1
+description: Base policy metadata; see specific YAML files for enforceable rules.
+severity_scale:
+  - info
+  - low
+  - medium
+  - high
+  - critical

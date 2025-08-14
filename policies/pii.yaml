@@ -1,0 +1,18 @@
+name: pii
+description: Detects personally identifiable information patterns.
+rules:
+  - id: pii_email
+    description: Email address should not be disclosed
+    severity: medium
+    pattern: (?i)\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b
+    type: regex
+  - id: pii_phone
+    description: US-like phone numbers should not be disclosed
+    severity: medium
+    pattern: (?<!\d)(?:\+?1[-.\s]?)?(?:\(\d{3}\)|\d{3})[-.\s]?\d{3}[-.\s]?\d{4}(?!\d)
+    type: regex
+  - id: pii_ssn
+    description: US SSN pattern
+    severity: high
+    pattern: (?<!\d)\d{3}-\d{2}-\d{4}(?!\d)
+    type: regex

@@ -1,0 +1,16 @@
+dataset:
+  prompts_path: data/samples/prompts.jsonl
+  outputs_path: data/samples/outputs.jsonl
+
+checks:
+  - pii
+  - harmful_content
+  - jailbreak
+
+policy_files:
+  - policies/base_policy.yaml
+  - policies/pii.yaml
+  - policies/harmful_content.yaml
+  - policies/jailbreak.yaml
+
+out_dir: out/sample_run

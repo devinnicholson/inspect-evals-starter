@@ -1,0 +1,21 @@
+name: harmful_content
+description: Basic keyword-based detection for harmful categories.
+categories:
+  hate:
+    severity: high
+    keywords:
+      - "hate"
+      - "inferior group"
+      - "go back to"
+  violence:
+    severity: high
+    keywords:
+      - "kill"
+      - "hurt"
+      - "attack"
+  self_harm:
+    severity: high
+    keywords:
+      - "kill myself"
+      - "suicide"
+      - "self harm"
